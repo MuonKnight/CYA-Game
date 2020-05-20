@@ -1,0 +1,10 @@
+###Post-Demo Version Development###
+Moving into further development of the demo version, will be adding dict's of player inventories that track throughout each playthrough.
+Items will be used in events. 
+Adding possible dialogue options based on stat prerequisites. Possible race-based interactions. We'll see.
+Plans to add alignment based decisions upon leaving tavern and exploring into the world.
+
+Possible experience system, very low priority though.
+I think that's all for now. 
+Thanks for reading.
+###################################
