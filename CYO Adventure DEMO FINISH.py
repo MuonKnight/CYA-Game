@@ -139,7 +139,7 @@ if p_check_status == 1:
                         print("The beast takes the hit though as it's approach is relentless.")
                     if skel1_health <=0: 
                         print("You have vanquished the thieving undead. You found one boneshard.")
-                        print("You slay the skeleton, taking your trophy, and moving out toward the rest of the village.")
+                        print("You slay the skeleton, taking your trophy, and move out toward the rest of the village.")
                         print("DEMO END")
                         #quit()
                 if roll2 < str_check1:
