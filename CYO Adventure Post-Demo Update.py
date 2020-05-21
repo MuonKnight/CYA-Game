@@ -240,7 +240,7 @@ while game_status == False:
             elif str_check_act =='n':
                 print("For... whatever reason you have conjured, you decide the best course of action is to stay completely still as the skeleton realizes you are alive and promptly beats you to death.")
                 print("You died.")   
-        again = input("Would you like to go again? (y/n) ")
+        again = input("Would you like to go again? (y/n) ") 
         if again == 'y':
              game_status = False
         else:
