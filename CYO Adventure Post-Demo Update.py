@@ -1,6 +1,5 @@
 
 #Character Information#
-import time
 name = input("Enter your character name: ")
 gender = input("What gender are you? ")
 race = input("What race are you? ")
