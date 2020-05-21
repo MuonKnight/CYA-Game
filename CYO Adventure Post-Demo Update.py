@@ -114,7 +114,7 @@ if p_check_status == 1:
                                 atk_roll1 = abs(2*random.randint(0,6)+str_mod)
                                 skel1_health = skel1_health - atk_roll1 
                                 if skel1_health > 0: 
-                                    print("The beast takes the hit though as it's approach is relentless.")
+                                    print("The beast takes the hit though as its approach is relentless.")
                                 if skel1_health <=0: 
                                     print("You have vanquished the thieving undead. You found one boneshard.")
                                     inventory_dict['boneshard'] = 1
@@ -147,7 +147,7 @@ if p_check_status == 1:
                     atk_roll1 = abs(2*random.randint(0,6)+str_mod)
                     skel1_health = skel1_health - atk_roll1 
                     if skel1_health > 0: 
-                        print("The beast takes the hit though as it's approach is relentless.")
+                        print("The beast takes the hit though as its approach is relentless.")
                     if skel1_health <=0: 
                         print("You have vanquished the thieving undead. You found one boneshard.")
                         inventory_dict['boneshard'] = 1
@@ -170,7 +170,7 @@ if p_check_status == 1:
                 atk_roll1 = abs(2*random.randint(0,6)+str_mod)
                 skel1_health = skel1_health - atk_roll1 
                 if skel1_health > 0: 
-                    print("The beast takes the hit though as it's approach is relentless.")
+                    print("The beast takes the hit though as its approach is relentless.")
                 if skel1_health <=0: 
                     print("You have vanquished the thieving undead. You found one boneshard.")
                     inventory_dict['boneshard'] = 1
@@ -186,7 +186,7 @@ elif p_check_status == 0:
     weapon = input("What weapon did you bring? ")
     print("You sheath your " + weapon + " and make your way to the door of your room.")
     inventory_dict['weapon'] = weapon
-    print("Upon leaving the room you and a skeleton make... eye contact? Causing the skeleton to rush you.")
+    print("Upon leaving the room you and a skeleton make eye contact? Causing the skeleton to rush you.")
     print("You have no choice but to attack!")
     input("Press 'Enter' to continue.")
     skel1_health = 2*random.randint(0,8)+4
@@ -199,7 +199,7 @@ elif p_check_status == 0:
                 atk_roll1 = abs(2*random.randint(0,6)+str_mod)
                 skel1_health = skel1_health - atk_roll1 
                 if skel1_health > 0: 
-                    print("The beast takes the hit though as it's approach is relentless.")
+                    print("The beast takes the hit though as its approach is relentless.")
                 if skel1_health <=0: 
                     print("You have vanquished the thieving undead. You found one boneshard.")
                     inventory_dict['boneshard'] = 1
@@ -227,7 +227,7 @@ elif p_check_status == -1:
                 atk_roll1 = abs(2*random.randint(0,6)+str_mod)
                 skel1_health = skel1_health - atk_roll1 
                 if skel1_health > 0: 
-                    print("The beast takes the hit though as it's approach is relentless.")
+                    print("The beast takes the hit though as its approach is relentless.")
                 if skel1_health <=0: 
                     print("You have vanquished the thieving undead. You found one boneshard.")
                     inventory_dict['boneshard'] = 1
