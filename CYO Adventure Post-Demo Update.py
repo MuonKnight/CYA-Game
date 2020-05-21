@@ -1,3 +1,4 @@
+###CYO ADVENTURE GAME###
 
 #Character Information#
 name = input("Enter your character name: ")
@@ -5,6 +6,7 @@ gender = input("What gender are you? ")
 race = input("What race are you? ")
 align = input("What alignment are you? ")
 inventory_dict = {}
+
 #Alignment Function#
 align_dict = {'lawful good': 1, 'neutral good':2,'chaotic good':3,'lawful neutral':4,'true neutral':5,'chaotic neutral':6,'lawful evil':7,'neutral evil':8,'chaotic evil':9}
 align = align.lower()
@@ -47,6 +49,7 @@ if p_check_act == 'y':
         p_check_status = 1
     elif roll1 <= 0:
         print("You fall back asleep.")
+        input("Press 'Enter' to continue.")
         p_check_status = -1
     elif roll1 < p_check1:
         print("You find nothing of significance.")
@@ -62,7 +65,9 @@ if p_check_status == 1:
     inventory_dict['gold'] = 50
     weapon = input("What weapon did you bring? ")
     print("You draw your " + weapon + " and make your way to the door of your room.")
+    inventory_dict['weapon'] = weapon
     print("You slowly open the door and make your way past the barren, opened rooms of the tavern.")
+
 #Stealth Check 1#
     stealth_check = 14
     dex_mod = (stats.get('Dexterity')-10)/2
@@ -93,6 +98,7 @@ if p_check_status == 1:
                             print("DEMO END")
                             #quit()
                     if snk_roll < stealth_check:
+
         #Failed Stealth Attack Phase#
                         print("Your attack misses entirely.")
                         print("The skeleton, now knowing where you are, begins its approach.")
@@ -124,6 +130,7 @@ if p_check_status == 1:
                 print("You sneak out of the tavern without a creak of the floorboards.")
                 print("DEMO END")
                 #quit()
+
         #Failed Stealth Attack Phase#
         elif stealth_roll1 < stealth_check:
             print("Your sneak attempt fails. The skeleton takes notice to you.")
@@ -178,6 +185,7 @@ elif p_check_status == 0:
     print("You stand up and gather yourself and your gear.")
     weapon = input("What weapon did you bring? ")
     print("You sheath your " + weapon + " and make your way to the door of your room.")
+    inventory_dict['weapon'] = weapon
     print("Upon leaving the room you and a skeleton make... eye contact? Causing the skeleton to rush you.")
     print("You have no choice but to attack!")
     input("Press 'Enter' to continue.")
@@ -227,10 +235,12 @@ elif p_check_status == -1:
                     print("Upon killing the undead you find your weapon in the closet.")
                     weapon = input("What weapon did you bring?" )
                     print("You sheath your " + weapon + " and move past the barren, opened tavern rooms to the exit.")
+                    inventory_dict['weapon'] = weapon
                     print("DEMO END")
                     #quit()
             if roll2 < str_check1:
                 print("Your attack misses and the beast gains ground.")
+
 #Possible Ending#
     elif str_check_act =='n':
         print("For... whatever reason you have conjured, you decide the best course of action is to stay completely still as the skeleton realizes you are alive and promptly beats you to death.")
