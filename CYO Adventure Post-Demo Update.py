@@ -100,7 +100,7 @@ while game_status == False:
                                     inventory_dict['boneshard'] = 1
                                     input("Press 'Enter' to continue.")
                                     print("Upon ending the skeleton, you move towards the tavern exit.")
-                                    print("DEMO END")    
+                                    #print("DEMO END")    
                             if snk_roll < stealth_check:
 
                 #Failed Stealth Attack Phase#
@@ -124,14 +124,14 @@ while game_status == False:
                                             inventory_dict['boneshard'] = 1
                                             input("Press 'Enter' to continue.")
                                             print("Upon slaying the undead, you take your trophy and leave the tavern.")
-                                            print("DEMO END")
+                                            #print("DEMO END")
                                     if roll2 < str_check1:
                                         print("Your attack misses and the beast gains ground.")
                     elif snk_attack_act =='n':
                         print("You decide to sneak past the skeleton, sparing its undead life for another day.")
                         input("Press 'Enter' to continue.")
                         print("You sneak out of the tavern without a creak of the floorboards.")
-                        print("DEMO END")
+                        #print("DEMO END")
                 
                 #Failed Stealth Attack Phase#
                 elif stealth_roll1 < stealth_check:
@@ -154,7 +154,7 @@ while game_status == False:
                                 inventory_dict['boneshard'] = 1
                                 input("Press 'Enter' to continue.")
                                 print("You slay the skeleton, taking your trophy, and move out toward the rest of the village.")
-                                print("DEMO END")
+                                #print("DEMO END")
                         if roll2 < str_check1:
                             print("Your attack misses and the beast gains ground.")
             if stealth_check_act == 'n':
@@ -176,7 +176,7 @@ while game_status == False:
                             inventory_dict['boneshard'] = 1
                             input("Press 'Enter' to continue.")
                             print("You step over the crumbled bones beneath you and approach the exit of the tavern.")
-                            print("DEMO END")  
+                            #print("DEMO END")  
                     if roll2 < str_check1:
                         print("Your attack misses and the beast gains ground.") 
         elif p_check_status == 0:
@@ -203,7 +203,7 @@ while game_status == False:
                             inventory_dict['boneshard'] = 1
                             input("Press 'Enter' to continue.")
                             print("You step over the crumbled bones beneath you and approach the exit of the tavern.")
-                            print("DEMO END")
+                            #print("DEMO END")
         elif p_check_status == -1:
             print("You wake up in a panic to the sounds of rattling bones.")
             print("You just finish wiping your eyes when the cold, lifeless fingers of a skeleton begins going through your belongings.")
@@ -232,14 +232,151 @@ while game_status == False:
                             weapon = input("What weapon did you bring?" )
                             print("You sheath your " + weapon + " and move past the barren, opened tavern rooms to the exit.")
                             inventory_dict['weapon'] = weapon
-                            print("DEMO END")
+                            #print("DEMO END")
                     if roll2 < str_check1:
                         print("Your attack misses and the beast gains ground.")
 
         #Possible Ending#
             elif str_check_act =='n':
                 print("For... whatever reason you have conjured, you decide the best course of action is to stay completely still as the skeleton realizes you are alive and promptly beats you to death.")
-                print("You died.")   
+                print("You died.")
+                quit()   
+        #Out of the Tavern (Stealth Check = 1)#
+        smith_check = input("You exit the tavern and look around. Surrounding you is buildings, ones mostly in ruins, and you see an operating smithy. Would you like to go? (y/n) ")
+        if smith_check == 'y':
+            upgrade_1 = input("You walk to the smithy and remember the boneshard you picked up earlier. Would you like to use it? (y/n) ")
+            if upgrade_1 =='y':
+                if inventory_dict['boneshard'] == 1:
+                    print("You use the boneshard to upgrade your weapon, making it a bone " + weapon + ". You put it away and leave the smithy.")
+                    weapon = 'bone ' + weapon
+                    inventory_dict['weapon'] = weapon
+                    inventory_dict['boneshard'] = 0
+            if upgrade_1 =='n':
+                print("You elect not to use the boneshard. Seeing no other reason to stick around, you leave the smithy.")
+        elif smith_check == 'n':
+            print("You see no reason to go to the smithy and look elsewhere beyond the town.")
+        print("You look back one more time upon the town and watch the flames devour the last pieces.")
+        print("You finally begin your march out of the town and into the heavily wooded trails.")
+        print("********************************************************************************")
+        input("Press 'Enter' to continue.")
+        print("After traveling for some time you come across a man sitting at the fork in the path ahead.")
+        print("As you get closer, the man looks up.")
+        print("What's a blasted " + race + " like you doing in these woods?")
+        wood_dialogue = 0
+        while wood_dialogue == 0:
+            print("***DIALOGUE OPTIONS***")
+            print("1. What have you got against my race?")
+            print("2. I'm just looking for a way through these woods.")
+            print("3. What's a blasted man like you doing in these woods?")
+            print("4. Hold your tongue unless you wish to lose it.")
+            wood_option = int(input("Select a number 1-4. "))
+            if wood_option == 1:
+                print("Never liked your kind. Bring trouble wherever you go.")
+                input("Press 'Enter' to continue.")
+            elif wood_option == 2:
+                print("Both paths will take you from these woods, though the journey differs.")
+                print("If you're looking for the safest path by the gods stay on the right one.")
+                print("Though if you think you're strong... then take the left.")
+                input("Press 'Enter' to continue.")
+                wood_dialogue = 1
+            elif wood_option == 3:
+                print("Hiding from what happened from the village not too far from here.")
+                input("Press 'Enter' to continue.")
+            elif wood_option == 4:
+                print("That's no way to talk to your elder man.")
+                input("Press 'Enter' to continue.")
+        print("You realize now you have a choice to make.")
+        wooded_path = int(input("Will you go down the right or left path? (1 = Right|2 = Left) "))
+        if wooded_path == 1:
+            print("With the choice seeming almost too obvious, you take the path on the right.")
+            print("You walk around a mile or so before a thought strikes you.")
+            print("You feel as though something is off. Considering the village this seems too calm.")
+            wood_per = 20
+            wood_per_check = input("You could investigate your surroundings. Would you like to? (y/n) ")
+            if wood_per_check == 'y':
+                roll_wood = random.randint(min2,max)+wisdom_mod
+                if roll_wood >= wood_per:
+                    print("Your investigation succeeds.")
+                    input("Press 'Enter' to continue.")
+                    print("You detect an awful, slurping beast in the distance and what appears to sound like dissolving bones.")
+                    wood_beast = input("You could go see what this is or you could ignore it and move on. Would you like to check what it is? (y/n) ")
+                    if wood_beast == 'y':
+                        print("Without a moment to hesitate you run off towards the sounds, the muck of the woods growing deeper around your feet.")
+                        print("You run for three minutes and yet you don't see anything close to the beast you heard earlier.")
+                        print("Suddenly, after running in the muck, you hear the dissolving sensation again, not from afar, though, as the sound is coming from you!")
+                        input("Press 'Enter' to continue.")
+                        print("All of the time you spent 'courageously' running into the muck, you failed to realize it was the muck that was the real monster.")
+                        print("You died.")
+                        quit()
+                    elif wood_beast == 'n': 
+                        print("You decide to ignore the sounds, remembering you have more important things to do.")
+                elif roll_wood < wood_per:
+                    print("Your investigation attempt fails.")
+                    input("Press 'Enter' to continue.")
+                    print("You continue on as if you had never tried to see anything.")
+        if wooded_path == 2:
+            print("You swallow what could be the lost drop of not-blood you have for a while as you prepare to go down the left path.")
+            print("You look back behind you, memorizing what feels like the last peaceful scene you might see, ready your weapon, and set on the path.")
+                
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         again = input("Would you like to go again? (y/n) ") 
         if again == 'y':
              game_status = False
@@ -250,5 +387,6 @@ while game_status == False:
     elif begin == 'n':
         print('Goodbye.')
         quit()
+        
 
 
