@@ -8,3 +8,14 @@ Possible experience system, very low priority though.
 I think that's all for now. 
 Thanks for reading.
 ###################################
+6/6/2020 UPDATE
+Tracking inventories have been added
+Items now utilized in events
+First dialogue option added 
+The update begins to expand past the events of the tavern as our hero (or not) heads into the forest.
+
+I plan on expanding and finishing the forest area soon. I have a few ideas and we will see how they develop.
+I would really like to begin using the alignment system thats implimented and branch the story there. Options may be added soon.
+That's all for now.
+Thanks for reading.
+###################################
