@@ -262,6 +262,7 @@ while game_status == False:
         print("After traveling for some time you come across a man sitting at the fork in the path ahead.")
         print("As you get closer, the man looks up.")
         print("What's a blasted " + race + " like you doing in these woods?")
+        #Dialogue in the Woods#
         wood_dialogue = 0
         while wood_dialogue == 0:
             print("***DIALOGUE OPTIONS***")
@@ -286,6 +287,7 @@ while game_status == False:
                 print("That's no way to talk to your elder man.")
                 input("Press 'Enter' to continue.")
         print("You realize now you have a choice to make.")
+        #The Path in the Woods#
         wooded_path = int(input("Will you go down the right or left path? (1 = Right|2 = Left) "))
         if wooded_path == 1:
             print("With the choice seeming almost too obvious, you take the path on the right.")
@@ -314,9 +316,11 @@ while game_status == False:
                     print("Your investigation attempt fails.")
                     input("Press 'Enter' to continue.")
                     print("You continue on as if you had never tried to see anything.")
+            #print("")
         if wooded_path == 2:
-            print("You swallow what could be the lost drop of not-blood you have for a while as you prepare to go down the left path.")
+            print("You swallow what could be the lost drop of not-blood you'll have for a while as you prepare to go down the left path.")
             print("You look back behind you, memorizing what feels like the last peaceful scene you might see, ready your weapon, and set on the path.")
+
                 
 
 
